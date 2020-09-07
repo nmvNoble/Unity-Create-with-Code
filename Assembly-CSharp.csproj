@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <None Include="Assets\Course Library\_Source_Files\_LICENSE.txt" />
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/Unity Projects/Unity Create with Code/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
