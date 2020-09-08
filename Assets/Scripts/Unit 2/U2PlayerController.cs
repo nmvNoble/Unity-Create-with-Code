@@ -8,6 +8,8 @@ public class U2PlayerController : MonoBehaviour
     private int _speed = 20;
     [SerializeField]
     private int _xRange = 10;
+    [SerializeField]
+    private GameObject _projectilePrefab;
 
     private float _horizontalInput;
     private float _forwardInput;
@@ -28,5 +30,12 @@ public class U2PlayerController : MonoBehaviour
             transform.position = new Vector3(-_xRange, transform.position.y, transform.position.z);
         else
             transform.Translate(Vector3.right * Time.deltaTime * _speed * _horizontalInput);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(_projectilePrefab, 
+                new Vector3(transform.position.x, 2, transform.position.z),  
+                _projectilePrefab.transform.rotation);
+        }
     }
 }
