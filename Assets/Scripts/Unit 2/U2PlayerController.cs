@@ -34,7 +34,7 @@ public class U2PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(_projectilePrefab, 
-                new Vector3(transform.position.x, 2, transform.position.z),  
+                new Vector3(transform.position.x, 1, transform.position.z),  
                 _projectilePrefab.transform.rotation);
         }
     }
