@@ -64,6 +64,11 @@
     <Compile Include="Assets\Scripts\Unit 2\U2MoveForward.cs" />
     <Compile Include="Assets\Scripts\Unit 2\SpawnManager.cs" />
     <Compile Include="Assets\Scripts\Unit 2\DetectCollisions.cs" />
+    <Compile Include="Assets\Challenge 2\Scripts\PlayerControllerX2.cs" />
+    <Compile Include="Assets\Challenge 2\Scripts\MoveForwardX2.cs" />
+    <Compile Include="Assets\Challenge 2\Scripts\DestroyOutOfBoundsX2.cs" />
+    <Compile Include="Assets\Challenge 2\Scripts\DetectCollisionsX2.cs" />
+    <Compile Include="Assets\Challenge 2\Scripts\SpawnManagerX2.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Course Library\_Source_Files\_LICENSE.txt" />

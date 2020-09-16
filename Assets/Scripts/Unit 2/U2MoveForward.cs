@@ -22,6 +22,11 @@ public class U2MoveForward : MonoBehaviour
         else
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
         if (transform.position.z > topBorder || transform.position.z < bottomBorder)
+        {
             Destroy(this.gameObject);
+            if (transform.position.z < bottomBorder)
+                Debug.Log("Game Over!");
+        }
+            
     }
 }
