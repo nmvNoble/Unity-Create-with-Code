@@ -69,6 +69,9 @@
     <Compile Include="Assets\Challenge 1\Scripts\PropellerX.cs" />
     <Compile Include="Assets\Scripts\Unit 2\U2PlayerController.cs" />
     <Compile Include="Assets\Scripts\Unit 1\U1PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Unit 3\U3PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Unit 3\MoveLeft.cs" />
+    <Compile Include="Assets\Scripts\Unit 3\U3SpawnManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Course Library\_Source_Files\Materials\UnlitVertexColour_Alpha.shader" />
