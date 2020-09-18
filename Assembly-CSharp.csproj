@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Unit 3\U3PlayerController.cs" />
     <Compile Include="Assets\Scripts\Unit 3\MoveLeft.cs" />
     <Compile Include="Assets\Scripts\Unit 3\U3SpawnManager.cs" />
+    <Compile Include="Assets\Scripts\Unit 3\RepeatBG.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Course Library\_Source_Files\Materials\UnlitVertexColour_Alpha.shader" />

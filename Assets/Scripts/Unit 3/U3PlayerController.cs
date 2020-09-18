@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class U3PlayerController : MonoBehaviour
 {
+    public bool gameOver = false;
+
     [SerializeField]
     private float _jumpForce = 10, _gravityMod = 1;
 
@@ -29,6 +31,12 @@ public class U3PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        _isOnGround = true;
+        if(collision.gameObject.CompareTag("Ground"))
+            _isOnGround = true;
+        else if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            gameOver = true;
+            Debug.Log("Oof");
+        }
     }
 }
