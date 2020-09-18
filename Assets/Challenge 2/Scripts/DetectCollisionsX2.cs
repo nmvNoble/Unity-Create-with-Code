@@ -8,5 +8,6 @@ public class DetectCollisionsX2 : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
+        Debug.Log("Ball caught!");
     }
 }

@@ -19,6 +19,7 @@ public class DestroyOutOfBoundsX2 : MonoBehaviour
         else if (transform.position.y < bottomLimit)
         {
             Destroy(gameObject);
+            Debug.Log("Oh no! Ball fell");
         }
 
     }

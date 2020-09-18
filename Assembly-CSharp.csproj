@@ -55,20 +55,20 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Unit 1\U1FollowPlayer.cs" />
-    <Compile Include="Assets\Challenge 1\Scripts\PlayerControllerX.cs" />
-    <Compile Include="Assets\Challenge 1\Scripts\FollowPlayerX.cs" />
-    <Compile Include="Assets\Challenge 1\Scripts\PropellerX.cs" />
-    <Compile Include="Assets\Scripts\Unit 2\U2PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Unit 1\U1PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Unit 2\U2MoveForward.cs" />
-    <Compile Include="Assets\Scripts\Unit 2\SpawnManager.cs" />
-    <Compile Include="Assets\Scripts\Unit 2\DetectCollisions.cs" />
     <Compile Include="Assets\Challenge 2\Scripts\PlayerControllerX2.cs" />
     <Compile Include="Assets\Challenge 2\Scripts\MoveForwardX2.cs" />
     <Compile Include="Assets\Challenge 2\Scripts\DestroyOutOfBoundsX2.cs" />
+    <Compile Include="Assets\Scripts\Unit 1\U1FollowPlayer.cs" />
+    <Compile Include="Assets\Challenge 1\Scripts\PlayerControllerX.cs" />
+    <Compile Include="Assets\Scripts\Unit 2\DetectCollisions.cs" />
+    <Compile Include="Assets\Scripts\Unit 2\U2MoveForward.cs" />
+    <Compile Include="Assets\Challenge 1\Scripts\FollowPlayerX.cs" />
     <Compile Include="Assets\Challenge 2\Scripts\DetectCollisionsX2.cs" />
     <Compile Include="Assets\Challenge 2\Scripts\SpawnManagerX2.cs" />
+    <Compile Include="Assets\Scripts\Unit 2\SpawnManager.cs" />
+    <Compile Include="Assets\Challenge 1\Scripts\PropellerX.cs" />
+    <Compile Include="Assets\Scripts\Unit 2\U2PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Unit 1\U1PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Course Library\_Source_Files\_LICENSE.txt" />

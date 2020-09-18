@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControllerX2 : MonoBehaviour
 {
     public GameObject dogPrefab; 
-    public float keyDelay = 1f;  // 1 second
+    public float keyDelay = .5f;  // half a second
     private float timePassed = 0f;
 
     // Update is called once per frame
