@@ -317,8 +317,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: 0
-  _jumpForce: 10
-  _gravityMod: 1
+  _jumpForce: 17
+  _gravityMod: 5
 --- !u!65 &715761649
 BoxCollider:
   m_ObjectHideFlags: 0
