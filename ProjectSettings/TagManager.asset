@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Money
+  - Obstacle
+  - Bomb
+  - Background
+  - Power Up
+  - Enemy
   layers:
   - Default
   - TransparentFX
