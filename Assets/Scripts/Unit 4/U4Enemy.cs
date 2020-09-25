@@ -20,5 +20,7 @@ public class U4Enemy : MonoBehaviour
     {
         Vector3 lookAt = (player.transform.position - transform.position).normalized;
         enemyRB.AddForce( lookAt * speed);
+        if (transform.position.y <= -10)
+            Destroy(this.gameObject);
     }
 }

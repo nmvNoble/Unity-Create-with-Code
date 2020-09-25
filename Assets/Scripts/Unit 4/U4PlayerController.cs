@@ -6,6 +6,7 @@ public class U4PlayerController : MonoBehaviour
 {
     public float speed = 5.0f;
     public bool hasPowerup;
+    public int deaths = 0;
 
     [SerializeField]
     private float _powerUpForce = 15.0f;
@@ -29,7 +30,11 @@ public class U4PlayerController : MonoBehaviour
         float forwardInput = Input.GetAxis("Vertical");
         _playerRB.AddForce(_focalPoint.transform.forward * speed * forwardInput);
         if (transform.position.y <= -1)
+        {
             transform.position = Vector3.zero;
+            deaths++;
+            Debug.Log("Deaths: " + deaths);
+        }
         _powerUpIndicator.transform.position = transform.position
             + new Vector3(0, 1.5f, 0);
     }
