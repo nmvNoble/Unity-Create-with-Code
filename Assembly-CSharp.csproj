@@ -82,6 +82,10 @@
     <Compile Include="Assets\Scripts\Unit 4\U4PlayerController.cs" />
     <Compile Include="Assets\Scripts\Unit 4\U4Enemy.cs" />
     <Compile Include="Assets\Scripts\Unit 4\U4SpawnManager.cs" />
+    <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\RotateCameraX4.cs" />
+    <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\SpawnManagerX4.cs" />
+    <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\EnemyX4.cs" />
+    <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\PlayerControllerX4.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Course Library\_Source_Files\Materials\UnlitVertexColour_Alpha.shader" />
