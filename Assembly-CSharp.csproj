@@ -57,7 +57,11 @@
   <ItemGroup>
     <Compile Include="Assets\Challenge Assets\Challenge 2\Scripts\PlayerControllerX2.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 2\Scripts\MoveForwardX2.cs" />
+    <Compile Include="Assets\Scripts\Unit 4\U4RotateCamera.cs" />
+    <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\RotateCameraX4.cs" />
+    <Compile Include="Assets\Scripts\Unit 4\U4SpawnManager.cs" />
     <Compile Include="Assets\Scripts\Unit 3\U3SpawnManager.cs" />
+    <Compile Include="Assets\Scripts\Unit 4\U4Enemy.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 2\Scripts\DestroyOutOfBoundsX2.cs" />
     <Compile Include="Assets\Scripts\Unit 1\U1FollowPlayer.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 1\Scripts\PlayerControllerX.cs" />
@@ -71,25 +75,28 @@
     <Compile Include="Assets\Scripts\Unit 2\SpawnManager.cs" />
     <Compile Include="Assets\Scripts\Unit 3\MoveLeft.cs" />
     <Compile Include="Assets\Scripts\Unit 3\RepeatBG.cs" />
+    <Compile Include="Assets\Scripts\Unit 4\U4PlayerController.cs" />
     <Compile Include="Assets\Scripts\Unit 3\U3PlayerController.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 3\_Source_Files\SpinObjectsX.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 1\Scripts\PropellerX.cs" />
+    <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\SpawnManagerX4.cs" />
+    <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\EnemyX4.cs" />
     <Compile Include="Assets\Scripts\Unit 2\U2PlayerController.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 3\Scripts\RepeatBackgroundX3.cs" />
     <Compile Include="Assets\Scripts\Unit 1\U1PlayerController.cs" />
-    <Compile Include="Assets\Challenge Assets\Challenge 3\Scripts\MoveLeftX3.cs" />
-    <Compile Include="Assets\Scripts\Unit 4\U4RotateCamera.cs" />
-    <Compile Include="Assets\Scripts\Unit 4\U4PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Unit 4\U4Enemy.cs" />
-    <Compile Include="Assets\Scripts\Unit 4\U4SpawnManager.cs" />
-    <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\RotateCameraX4.cs" />
-    <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\SpawnManagerX4.cs" />
-    <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\EnemyX4.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\PlayerControllerX4.cs" />
+    <Compile Include="Assets\Challenge Assets\Challenge 3\Scripts\MoveLeftX3.cs" />
+    <Compile Include="Assets\Course Library\_Source_Files\Scripts\DestroyAfterDelay.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\Course Library\Fonts\Margarine\OFL.txt" />
      <None Include="Assets\Course Library\_Source_Files\Materials\UnlitVertexColour_Alpha.shader" />
+     <None Include="Assets\Course Library\Fonts\Roboto_Condensed\LICENSE.txt" />
      <None Include="Assets\Course Library\_Source_Files\_LICENSE.txt" />
+     <None Include="Assets\Course Library\Fonts\Baloo_Chettan\OFL.txt" />
+     <None Include="Assets\Course Library\Fonts\Indie_Flower\OFL.txt" />
+     <None Include="Assets\Course Library\Fonts\Exo_2\OFL.txt" />
+     <None Include="Assets\Course Library\Fonts\Oswald\OFL.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.0f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
