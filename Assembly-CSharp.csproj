@@ -87,6 +87,8 @@
     <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\PlayerControllerX4.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 3\Scripts\MoveLeftX3.cs" />
     <Compile Include="Assets\Course Library\_Source_Files\Scripts\DestroyAfterDelay.cs" />
+    <Compile Include="Assets\Scripts\Unit 5\Target.cs" />
+    <Compile Include="Assets\Scripts\Unit 5\U5GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Course Library\Fonts\Margarine\OFL.txt" />
