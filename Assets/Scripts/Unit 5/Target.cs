@@ -6,7 +6,13 @@ public class Target : MonoBehaviour
 {
     [SerializeField]
     private float _minSpd = 10, _maxSpd = 14, _maxTrq = 10, _xRange = 4, _ySpawnPos = -1;
+    [SerializeField]
+    private int _pointVal;
+    [SerializeField]
+    private ParticleSystem _explosionParticle;
+
     private Rigidbody _targetRB;
+    private U5GameManager _gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +21,7 @@ public class Target : MonoBehaviour
         _targetRB.AddForce(RandForce(), ForceMode.Impulse);
         _targetRB.AddTorque(RandTorque(), RandTorque(), RandTorque(), ForceMode.Impulse);
         transform.position = RandSpawnPos();
+        _gameManager = GameObject.Find("Game Manager").GetComponent<U5GameManager>();
     }
 
     // Update is called once per frame
@@ -26,6 +33,8 @@ public class Target : MonoBehaviour
     private void OnMouseDown()
     {
         Destroy(gameObject);
+        Instantiate(_explosionParticle, transform.position, _explosionParticle.transform.rotation);
+        _gameManager.UpdateScore(_pointVal);
     }
 
     private void OnTriggerEnter(Collider other)

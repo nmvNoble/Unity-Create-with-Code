@@ -101,6 +101,9 @@ MonoBehaviour:
   _maxTrq: 10
   _xRange: 4
   _ySpawnPos: -1
+  _pointVal: 8
+  _explosionParticle: {fileID: 4758139293545943008, guid: c7ad2532a6eeb40b59033c75e71fa054,
+    type: 3}
 --- !u!54 &2234287349395902845
 Rigidbody:
   m_ObjectHideFlags: 0
