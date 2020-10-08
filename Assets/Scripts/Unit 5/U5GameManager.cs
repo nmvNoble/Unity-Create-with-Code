@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class U5GameManager : MonoBehaviour
 {
     public List<GameObject> targets;
-    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreText, gameOverText;
+    public Button resetButton;
+    public bool isGameActive;
 
     [SerializeField]
     private float _spawnRate = 1.0f;
@@ -16,6 +20,7 @@ public class U5GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isGameActive = true;
         StartCoroutine(SpawnTarget());
         _score = 0;
         scoreText.text = "Score: " + _score;
@@ -29,7 +34,7 @@ public class U5GameManager : MonoBehaviour
 
     IEnumerator SpawnTarget()
     {
-        while (true)
+        while (isGameActive)
         {
             yield return new WaitForSeconds(_spawnRate);
             int index = Random.Range(0, targets.Count);
@@ -41,5 +46,17 @@ public class U5GameManager : MonoBehaviour
     {
         _score += scoreToAdd;
         scoreText.text = "Score: " + _score;
+    }
+
+    public void GameOver()
+    {
+        gameOverText.gameObject.SetActive(true);
+        resetButton.gameObject.SetActive(true);
+        isGameActive = false;
+    }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
