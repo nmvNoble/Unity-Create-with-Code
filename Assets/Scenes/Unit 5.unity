@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d68e2e5d04548a4f9275a51d2b24c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: 2
+  difficulty: 1.5
 --- !u!1 &83278922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d68e2e5d04548a4f9275a51d2b24c06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: 3
+  difficulty: 2
 --- !u!1 &1511611796
 GameObject:
   m_ObjectHideFlags: 0
