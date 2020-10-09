@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class U5GameManager : MonoBehaviour
 {
+    public bool isGameActive;
     public List<GameObject> targets;
     public TextMeshProUGUI scoreText, gameOverText;
     public Button resetButton;
-    public bool isGameActive;
+    public GameObject titleScreen;
 
     [SerializeField]
     private float _spawnRate = 1.0f;
@@ -20,9 +21,9 @@ public class U5GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isGameActive = true;
-        StartCoroutine(SpawnTarget());
-        _score = 0;
+        //isGameActive = true;
+        //StartCoroutine(SpawnTarget());
+        //_score = 0;
         scoreText.text = "Score: " + _score;
     }
 
@@ -30,6 +31,16 @@ public class U5GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void StartGame(float difficulty)
+    {
+        titleScreen.gameObject.SetActive(false);
+        isGameActive = true;
+        _score = 0;
+        _spawnRate /= difficulty;
+        UpdateScore(_score);
+        StartCoroutine(SpawnTarget());
     }
 
     IEnumerator SpawnTarget()

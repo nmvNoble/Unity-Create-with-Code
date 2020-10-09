@@ -89,6 +89,7 @@
     <Compile Include="Assets\Course Library\_Source_Files\Scripts\DestroyAfterDelay.cs" />
     <Compile Include="Assets\Scripts\Unit 5\Target.cs" />
     <Compile Include="Assets\Scripts\Unit 5\U5GameManager.cs" />
+    <Compile Include="Assets\Scripts\Unit 5\Difficulty.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
