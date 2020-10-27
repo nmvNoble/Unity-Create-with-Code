@@ -50,12 +50,8 @@ public class U1PlayerController : MonoBehaviour
         _rpm = Mathf.Round((_speed % 30)*40);
         _rpmText.SetText("RPM: " + _rpm);
 
-        if (gameObject.transform.position.y < -5)
-        {
-            gameObject.transform.position = _respawnPos;
-            gameObject.transform.rotation = _respawnRot;
-        }
-            
+        if (gameObject.transform.position.y < -5 || Input.GetKeyDown(KeyCode.Space))
+            ResetPos();
     }
 
     bool IsOnGround()
@@ -69,5 +65,11 @@ public class U1PlayerController : MonoBehaviour
             return true;
         else
             return false;
+    }
+
+    public void ResetPos()
+    {
+        gameObject.transform.position = _respawnPos;
+        gameObject.transform.rotation = _respawnRot;
     }
 }
