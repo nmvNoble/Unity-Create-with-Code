@@ -7,11 +7,14 @@ public class U1Obstacles : MonoBehaviour
     private Vector3 _respawnPos;
     private Quaternion _respawnRot;
 
-    U1GameManager _gm;
+    private U1GameManager _gm;
+    private Rigidbody _obstacleRB;
+
     // Start is called before the first frame update
     void Start()
     {
         _gm = GameObject.Find("Main Camera").GetComponent<U1GameManager>();
+        _obstacleRB = gameObject.GetComponent<Rigidbody>();
         _respawnPos = gameObject.transform.position;
         _respawnRot = gameObject.transform.rotation;
     }
@@ -22,14 +25,20 @@ public class U1Obstacles : MonoBehaviour
         if (gameObject.transform.position.y < -5)
         {
             gameObject.SetActive(false);
-            ResetPos();
+            ResetPos(true);
             _gm.FallenObstacle();
         }
     }
 
-    private void ResetPos()
+    private void ResetPos(bool rand=false)
     {
-        gameObject.transform.position = _respawnPos;
+        _obstacleRB.velocity = Vector3.zero;
+        _obstacleRB.angularVelocity = Vector3.zero;
         gameObject.transform.rotation = _respawnRot;
+        if (rand == false)
+            gameObject.transform.position = _respawnPos; 
+        else
+            gameObject.transform.position = new Vector3(Random.Range(-9, 8),
+                    _respawnPos.y, _respawnPos.z);
     }
 }
