@@ -5,15 +5,15 @@ using TMPro;
 
 public class PlayerControllerX : MonoBehaviour
 {
-    public float speed;
+    public float speed = 15;
     public float rotationSpeed;
     public float verticalInput;
-    public int cleared;
 
     [SerializeField] private TextMeshProUGUI _pathsClearedText;
     private Vector3 _respawnPos;
     private Quaternion _respawnRot;
     private GameManagerX1 _gm;
+    [SerializeField] private bool isColliding;
 
     // Start is called before the first frame update
     void Start()
@@ -35,27 +35,49 @@ public class PlayerControllerX : MonoBehaviour
         // tilt the plane up/down based on up/down arrow keys
         transform.Rotate(Vector3.right * rotationSpeed * Time.deltaTime * verticalInput);
 
-        if(gameObject.transform.position.z > 250 ||
-                    gameObject.transform.position.z < -25 ||
+        if(gameObject.transform.position.z > 350 ||
+                    gameObject.transform.position.z < -50 ||
                     gameObject.transform.position.y > 100 ||
                     gameObject.transform.position.y < -100)
         {
             ResetPos();
         }
     }
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerEnter (Collider other)
     {
-        if (other.gameObject.name == "Path")
+        if (!isColliding)
         {
-            cleared++;
-            other.gameObject.SetActive(false);
-            _pathsClearedText.SetText("Target Path Cleared: " + cleared);
+            //Debug.Log(_gm.cleared + ": trigger enter, " + isColliding);
+            isColliding = true;
+            if (other.gameObject.tag == "Path")
+            {
+                other.gameObject.SetActive(false);
+                _gm.cleared++;
+                _gm.isCompletePath = false;
+                //Debug.Log("("+other.gameObject.name+"=false) Target Path Cleared: " + _gm.cleared);
+                _pathsClearedText.SetText("Target Path Cleared: " + _gm.cleared);
+                StartCoroutine(TimedReposition(other));
+            }
+            else
+            {
+                ResetPos();
+                _gm.ResetGame();
+            }
         }
-        else
-        {
-            ResetPos();
-            _gm.ResetGame();
-        }
+    }
+
+    IEnumerator TimedReposition(Collider other)
+    {
+        yield return new WaitForSeconds(1f);
+        other.gameObject.transform.parent.gameObject.GetComponent<ObstacleX1>().ResetPos();
+        StartCoroutine(Reset());
+    }
+    IEnumerator Reset()
+    {
+        yield return new WaitForEndOfFrame();
+        //Debug.Log(_gm.cleared + ": after reposition, " + isColliding);
+        isColliding = false;
     }
 
     public void ResetPos()
