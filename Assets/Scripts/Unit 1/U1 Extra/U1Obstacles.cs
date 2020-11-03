@@ -22,7 +22,7 @@ public class U1Obstacles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.transform.position.y < -5)
+        if (gameObject.transform.position.y < -5 || gameObject.transform.position.z > 225)
         {
             gameObject.SetActive(false);
             ResetPos(true);

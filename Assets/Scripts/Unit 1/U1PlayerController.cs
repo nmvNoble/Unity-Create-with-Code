@@ -69,6 +69,8 @@ public class U1PlayerController : MonoBehaviour
 
     public void ResetPos()
     {
+        _rb.velocity = Vector3.zero;
+        _rb.angularVelocity = Vector3.zero;
         gameObject.transform.position = _respawnPos;
         gameObject.transform.rotation = _respawnRot;
     }
