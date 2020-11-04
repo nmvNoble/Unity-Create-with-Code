@@ -2181,10 +2181,10 @@ MonoBehaviour:
   _obstacleCountText: {fileID: 723348870}
   _clearsCountText: {fileID: 826809177}
   isGameActive: 0
-  timer: 60
-  restartButton: {fileID: 2040802413}
-  timeText: {fileID: 1373035066}
-  gameOverText: {fileID: 448400844}
+  _timer: 61
+  _restartButton: {fileID: 2040802413}
+  _timeText: {fileID: 1373035066}
+  _gameOverText: {fileID: 448400844}
 --- !u!1001 &578002886
 PrefabInstance:
   m_ObjectHideFlags: 0

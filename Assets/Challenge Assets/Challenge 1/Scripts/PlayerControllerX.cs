@@ -61,8 +61,8 @@ public class PlayerControllerX : MonoBehaviour
             }
             else
             {
-                ResetPos();
-                _gm.ResetGame();
+                //ResetPos();
+                _gm.GameOver();//ResetGame();
             }
         }
     }

@@ -14,9 +14,9 @@ public class U1GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _obstacleCountText, _clearsCountText;
 
     public bool isGameActive;
-    public int timer = 60;
-    public Button restartButton;
-    [SerializeField] private Text timeText, gameOverText;
+    [SerializeField] private int _timer = 61;
+    [SerializeField] private Button _restartButton;
+    [SerializeField] private Text _timeText, _gameOverText;
     private float _timeRemaining;
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class U1GameManager : MonoBehaviour
         clearedLevels = 0;
         _obstacleCountText.SetText("Obstacles: " + activeObstacles);
         isGameActive = true;
-        StartCoroutine(StartCountdown(timer));
+        StartCoroutine(StartCountdown(_timer));
     }
 
     // Update is called once per frame
@@ -58,7 +58,7 @@ public class U1GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1.0f);
             _timeRemaining--;
-            timeText.text = "Time: " + _timeRemaining;
+            _timeText.text = "Time: " + _timeRemaining;
             if (_timeRemaining == 0)
                 GameOver();
         }
@@ -68,10 +68,10 @@ public class U1GameManager : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0;
-        gameOverText.gameObject.SetActive(true); 
-        restartButton.transform.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0.5f);
-        restartButton.transform.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0.5f);
-        RectTransform restartRT = restartButton.GetComponent<RectTransform>();
+        _gameOverText.gameObject.SetActive(true); 
+        _restartButton.transform.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0.5f);
+        _restartButton.transform.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0.5f);
+        RectTransform restartRT = _restartButton.GetComponent<RectTransform>();
         restartRT.anchoredPosition = new Vector3(0, -40, 0);
         isGameActive = false;
     }
@@ -84,7 +84,6 @@ public class U1GameManager : MonoBehaviour
 
     public void ResetGame()
     {
-
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
