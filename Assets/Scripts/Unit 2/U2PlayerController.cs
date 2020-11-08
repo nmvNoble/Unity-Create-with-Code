@@ -7,12 +7,12 @@ public class U2PlayerController : MonoBehaviour
     [SerializeField]
     private int _speed = 20;
     [SerializeField]
-    private int _xRange = 10;
+    private int zMinRange = 0, zMaxRange = 15;//_xRange = 10;
     [SerializeField]
     private GameObject _projectilePrefab;
 
     private float _horizontalInput;
-    private float _forwardInput;
+    private float _verticalInput;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,18 +23,18 @@ public class U2PlayerController : MonoBehaviour
     void Update()
     {
         _horizontalInput = Input.GetAxis("Horizontal");
-        _forwardInput = Input.GetAxis("Vertical");
-        if (transform.position.x > _xRange)
-            transform.position = new Vector3(_xRange, transform.position.y, transform.position.z);
-        else if (transform.position.x < -_xRange)
-            transform.position = new Vector3(-_xRange, transform.position.y, transform.position.z);
+        _verticalInput = Input.GetAxis("Vertical");
+        if (transform.position.z > zMaxRange)//transform.position.x > _xRange
+            transform.position = new Vector3(transform.position.x, transform.position.y, zMaxRange);// = new Vector3(_xRange, ...
+        else if (transform.position.z < zMinRange)//transform.position.x < -_xRange
+            transform.position = new Vector3(transform.position.x, transform.position.y, zMinRange);// = new Vector3(-_xRange, ...
         else
-            transform.Translate(Vector3.right * Time.deltaTime * _speed * _horizontalInput);
+            transform.Translate(Vector3.left * Time.deltaTime * _speed * _verticalInput);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(_projectilePrefab, 
-                new Vector3(transform.position.x, 1, transform.position.z),  
+                new Vector3(transform.position.x, transform.position.y, transform.position.z),  
                 _projectilePrefab.transform.rotation);
         }
     }
