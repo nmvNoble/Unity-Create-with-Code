@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class U2PlayerController : MonoBehaviour
 {
+    public float keyDelay = .5f;  // half a second
+    private float timePassed = 0f;
+
     [SerializeField]
     private int _speed = 20;
     [SerializeField]
@@ -31,11 +34,13 @@ public class U2PlayerController : MonoBehaviour
         else
             transform.Translate(Vector3.left * Time.deltaTime * _speed * _verticalInput);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        timePassed += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.Space) && timePassed >= keyDelay)
         {
-            Instantiate(_projectilePrefab, 
-                new Vector3(transform.position.x, transform.position.y, transform.position.z),  
+            Instantiate(_projectilePrefab,
+                new Vector3(transform.position.x, transform.position.y, transform.position.z),
                 _projectilePrefab.transform.rotation);
+            timePassed = 0f;
         }
     }
 }

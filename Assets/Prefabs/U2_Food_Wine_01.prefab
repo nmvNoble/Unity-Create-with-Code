@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fce1ce46cac845947b939fc6cc974902, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   isProjectile: 1
   sideBorder: 20
 --- !u!65 &7682993774149080802
