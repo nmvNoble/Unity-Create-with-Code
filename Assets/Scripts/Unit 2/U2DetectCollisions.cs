@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DetectCollisions : MonoBehaviour
+public class U2DetectCollisions : MonoBehaviour
 {
+    private U2GameManager _gm;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _gm = GameObject.Find("Game Manager").GetComponent<U2GameManager>();
     }
 
     // Update is called once per frame
@@ -19,6 +20,10 @@ public class DetectCollisions : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(this.gameObject);
-        Destroy(other.gameObject);
+        if(other.tag != "Player")
+        {
+            _gm.UpdateScore(1);
+            Destroy(other.gameObject);
+        }
     }
 }

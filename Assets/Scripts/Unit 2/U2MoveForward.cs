@@ -12,7 +12,7 @@ public class U2MoveForward : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Pos x at " + transform.position.x);
+        //Debug.Log("Pos x at " + transform.position.x);
     }
 
     // Update is called once per frame
