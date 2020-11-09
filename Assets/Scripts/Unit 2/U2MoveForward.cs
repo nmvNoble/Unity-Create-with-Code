@@ -28,7 +28,7 @@ public class U2MoveForward : MonoBehaviour
         {
             Destroy(this.gameObject);
             if (transform.position.x < -sideBorder)//transform.position.z < bottomBorder
-                Debug.Log("Game Over!");
+                _gm.isGameOver = true;
         }
             
     }
