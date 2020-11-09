@@ -8,11 +8,13 @@ public class U2MoveForward : MonoBehaviour
     public bool isProjectile = false;
     //public int topBorder = 20, bottomBorder = -5;
     public int sideBorder = 20;
+    private U2GameManager _gm;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log("Pos x at " + transform.position.x);
+        _gm = GameObject.Find("Game Manager").GetComponent<U2GameManager>();
+        speed += (_gm.wave - 1)*2;
     }
 
     // Update is called once per frame
