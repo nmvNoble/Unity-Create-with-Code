@@ -7,7 +7,7 @@ public class DetectCollisionsX2 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Debug.Log("Ball caught at x:" + Mathf.Floor(transform.position.x));
         Destroy(gameObject);
-        Debug.Log("Ball caught!");
     }
 }
