@@ -23,11 +23,12 @@ public class GameManagerX2 : MonoBehaviour
 
     private void Update()
     {
-        if (_isNewWave == false && score % 20 == 0)
+        if (_isNewWave == false && score % 10 == 0)
         {
             _isNewWave = true;
+            _waveText.text = "Dog Speed: " + (30 + ((wave) * 2));
+            Debug.Log("Dog Speed: " + (30 + ((wave) * 2)) + ", score: " + score + " % 10 == 0");
             wave++;
-            _waveText.text = "Wave: " + wave;
         }
         if (isGameOver)
             GameOver();
