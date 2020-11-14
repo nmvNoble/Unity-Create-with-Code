@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class MoveLeft : MonoBehaviour
 {
-    private float _speed = 30, _leftBound = -15;
+    [SerializeField] private float _speed = 30;
+    private float _leftBound = -15;
     private U3PlayerController _u3PCScript;
 
     // Start is called before the first frame update
@@ -19,7 +20,7 @@ public class MoveLeft : MonoBehaviour
         if (_u3PCScript.gameOver == false)
             transform.Translate(Vector3.left * _speed * Time.deltaTime);
 
-        if (transform.position.x < _leftBound)
+        if (transform.position.y < -1)//x < _leftBound)
             Destroy(gameObject);
     }
 }
