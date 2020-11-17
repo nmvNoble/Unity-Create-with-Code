@@ -59,6 +59,7 @@
     <Compile Include="Assets\Challenge Assets\Challenge 2\Scripts\PlayerControllerX2.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 2\Scripts\MoveForwardX2.cs" />
     <Compile Include="Assets\Scripts\Unit 4\U4RotateCamera.cs" />
+    <Compile Include="Assets\Challenge Assets\Challenge 2\Scripts\C2 Extras\GameManagerX2.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\RotateCameraX4.cs" />
     <Compile Include="Assets\Scripts\Unit 4\U4SpawnManager.cs" />
     <Compile Include="Assets\Scripts\Unit 3\U3SpawnManager.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\Scripts\Unit 2\U2MoveForward.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 1\Scripts\FollowPlayerX.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 2\Scripts\DetectCollisionsX2.cs" />
+    <Compile Include="Assets\Scripts\Unit 2\U2 Extra\U2GameManager.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 2\Scripts\SpawnManagerX2.cs" />
     <Compile Include="Assets\Course Library\_Source_Files\Scripts\DestroyAfterDelay.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 3\Scripts\PlayerControllerX3.cs" />
@@ -99,8 +101,7 @@
     <Compile Include="Assets\Scripts\Unit 5\Target.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\PlayerControllerX4.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 3\Scripts\MoveLeftX3.cs" />
-    <Compile Include="Assets\Scripts\Unit 2\U2 Extra\U2GameManager.cs" />
-    <Compile Include="Assets\Challenge Assets\Challenge 2\Scripts\C2 Extras\GameManagerX2.cs" />
+    <Compile Include="Assets\Scripts\Unit 3\U3 Extras\U3GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

@@ -6,18 +6,18 @@ public class MoveLeft : MonoBehaviour
 {
     [SerializeField] private float _speed = 30;
     private float _leftBound = -15;
-    private U3PlayerController _u3PCScript;
+    private U3GameManager _gm;
 
     // Start is called before the first frame update
     void Start()
     {
-        _u3PCScript = GameObject.Find("Player").GetComponent<U3PlayerController>();
+        _gm = GameObject.Find("Game Manager").GetComponent<U3GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_u3PCScript.gameOver == false)
+        if (_gm.isGameOver == false)
             transform.Translate(Vector3.left * _speed * Time.deltaTime);
 
         if (transform.position.y < -1)//x < _leftBound)

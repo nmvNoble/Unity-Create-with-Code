@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class U3PlayerController : MonoBehaviour
 {
-    public bool gameOver = false;
 
     [SerializeField]
     private AudioClip _jumpSFX, _crashSFX;
@@ -17,10 +16,12 @@ public class U3PlayerController : MonoBehaviour
     private Animator _playerAnim;
     private AudioSource _playerAudio;
     private bool _isOnGround = true;
+    private U3GameManager _gm;
 
     // Start is called before the first frame update
     void Start()
     {
+        _gm = GameObject.Find("Game Manager").GetComponent<U3GameManager>();
         _playerRB = GetComponent<Rigidbody>();
         _playerAnim = GetComponent<Animator>();
         _playerAudio = GetComponent<AudioSource>();
@@ -30,7 +31,7 @@ public class U3PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gameOver && Input.GetKeyDown(KeyCode.Space) && _isOnGround)//&& transform.position.y <= 0)
+        if (!_gm.isGameOver && Input.GetKeyDown(KeyCode.Space) && _isOnGround)//&& transform.position.y <= 0)
         {
             _playerRB.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
             _isOnGround = false;
@@ -50,7 +51,7 @@ public class U3PlayerController : MonoBehaviour
             
         else if (collision.gameObject.CompareTag("Obstacle"))
         {
-            gameOver = true;
+            _gm.isGameOver = true;
             Debug.Log("Oof");
             _playerAnim.SetBool("Death_b", true);
             _playerAnim.SetInteger("DeathType_int", 1);
