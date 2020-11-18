@@ -23,7 +23,6 @@ public class U3GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (isGameOver)
             GameOver();
     }

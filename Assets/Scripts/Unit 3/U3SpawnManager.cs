@@ -22,7 +22,6 @@ public class U3SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
     IEnumerator SpawnObstacle()

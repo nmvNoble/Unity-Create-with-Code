@@ -10,13 +10,15 @@ public class U3PlayerController : MonoBehaviour
     [SerializeField]
     private ParticleSystem _explosionParticle, _dirtParticle;
     [SerializeField]
-    private float _jumpForce = 10, _gravityMod = 1;// 17, 5 in mine
+    private float _jumpForce = 10, _gravityMod = 1, _setGravity;// 17, 5 in mine
 
     private Rigidbody _playerRB;
     private Animator _playerAnim;
     private AudioSource _playerAudio;
     private bool _isOnGround = true;
     private U3GameManager _gm;
+
+    public U3RepeatBG __tempBG;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,7 @@ public class U3PlayerController : MonoBehaviour
         _playerRB = GetComponent<Rigidbody>();
         _playerAnim = GetComponent<Animator>();
         _playerAudio = GetComponent<AudioSource>();
+
         Physics.gravity *= _gravityMod;
     }
 
@@ -38,15 +41,17 @@ public class U3PlayerController : MonoBehaviour
             _playerAnim.SetTrigger("Jump_trig");
             _dirtParticle.Stop();
             _playerAudio.PlayOneShot(_jumpSFX, 1.0f);
+            __tempBG.JumpStart();
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") && !_gm.isGameOver)
         {
             _isOnGround = true;
             _dirtParticle.Play();
+            __tempBG.JumpEnd();
         }
             
         else if (collision.gameObject.CompareTag("Obstacle"))
@@ -58,6 +63,7 @@ public class U3PlayerController : MonoBehaviour
             _explosionParticle.Play();
             _dirtParticle.Stop();
             _playerAudio.PlayOneShot(_crashSFX, 1.0f);
+            Physics.gravity /= _gravityMod;
         }
     }
 }
