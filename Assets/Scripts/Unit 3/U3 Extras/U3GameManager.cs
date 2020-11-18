@@ -7,13 +7,17 @@ using UnityEngine.SceneManagement;
 public class U3GameManager : MonoBehaviour
 {
     public bool isGameOver = false;
+    public int time;
 
+    [SerializeField] private Text _timeText;
     [SerializeField] private GameObject _gameOverText, _resetButton;
+
     // Start is called before the first frame update
     void Start()
     {
         //Time.timeScale = 1;
         isGameOver = false;
+        StartCoroutine(StartTimer());
     }
 
     // Update is called once per frame
@@ -22,6 +26,16 @@ public class U3GameManager : MonoBehaviour
 
         if (isGameOver)
             GameOver();
+    }
+
+    public IEnumerator StartTimer()
+    {
+        while (!isGameOver)
+        {
+            yield return new WaitForSeconds(1.0f);
+            time++;
+            _timeText.text = "Time: " + time;
+        }
     }
 
     void GameOver()
