@@ -1008,10 +1008,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5210fb11b72c86a4983124853f4cf561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _obstaclePrefab: {fileID: 1580792115177486630, guid: 495ba5d780bfafb44b8019174e61be5f,
+  _obstaclePrefab: {fileID: 231268408006626635, guid: 47abbdb09800d404ba594b137d7ac3da,
     type: 3}
   _tempPrefab: {fileID: 8968131289104861975, guid: a65b3de3fa37eb644b2ad595c56a5d79,
     type: 3}
+  _startDelay: 2
+  _repeatRate: 2
 --- !u!1001 &1069535861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1259,10 +1261,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGameOver: 0
+  isGameOverMenu: 0
   time: 0
   _timeText: {fileID: 66843763}
   _gameOverText: {fileID: 1573126116}
   _resetButton: {fileID: 805849409}
+  _gravityMod: 5
 --- !u!4 &1302903689
 Transform:
   m_ObjectHideFlags: 0
@@ -1683,7 +1687,7 @@ Transform:
   m_GameObject: {fileID: 2014335011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 20.3, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 1}
+  m_LocalScale: {x: 11, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5

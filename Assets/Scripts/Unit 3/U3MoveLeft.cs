@@ -23,4 +23,10 @@ public class U3MoveLeft : MonoBehaviour
         if (transform.position.y < -1)//x < _leftBound)
             Destroy(gameObject);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Obstacle" && other.name != "Limtier")
+            Destroy(other.gameObject);
+    }
 }

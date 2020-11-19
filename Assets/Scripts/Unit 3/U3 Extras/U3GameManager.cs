@@ -16,12 +16,10 @@ public class U3GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Time.timeScale = 1;
         isGameOver = false;
         StartCoroutine(StartTimer());
 
         Physics.gravity *= _gravityMod;
-        Debug.Log("Gravity Start: " + Physics.gravity);
     }
 
     // Update is called once per frame
@@ -44,9 +42,7 @@ public class U3GameManager : MonoBehaviour
     void GameOver()
     {
         isGameOverMenu = true;
-        //Time.timeScale = 0;
         Physics.gravity /= _gravityMod;
-        Debug.Log("Gravity end: " + Physics.gravity);
         _gameOverText.SetActive(true);
         _resetButton.SetActive(true);
     }
