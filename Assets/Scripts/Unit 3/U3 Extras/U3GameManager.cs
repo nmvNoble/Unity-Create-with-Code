@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class U3GameManager : MonoBehaviour
 {
-    public bool isGameOver = false;
+    public bool isGameOver = false, isGameOverMenu = false;
     public int time;
 
     [SerializeField] private Text _timeText;
     [SerializeField] private GameObject _gameOverText, _resetButton;
+    [SerializeField] private float _gravityMod = 1;// 5 in mine
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +19,15 @@ public class U3GameManager : MonoBehaviour
         //Time.timeScale = 1;
         isGameOver = false;
         StartCoroutine(StartTimer());
+
+        Physics.gravity *= _gravityMod;
+        Debug.Log("Gravity Start: " + Physics.gravity);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isGameOver)
+        if (isGameOver & !isGameOverMenu)
             GameOver();
     }
 
@@ -39,7 +43,10 @@ public class U3GameManager : MonoBehaviour
 
     void GameOver()
     {
+        isGameOverMenu = true;
         //Time.timeScale = 0;
+        Physics.gravity /= _gravityMod;
+        Debug.Log("Gravity end: " + Physics.gravity);
         _gameOverText.SetActive(true);
         _resetButton.SetActive(true);
     }

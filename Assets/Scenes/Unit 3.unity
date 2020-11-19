@@ -577,6 +577,7 @@ MonoBehaviour:
   _dirtParticle: {fileID: 1422198345}
   _jumpForce: 17
   _gravityMod: 5
+  _setGravity: 0
   __tempBG: {fileID: 835818924}
 --- !u!65 &715761649
 BoxCollider:
@@ -1008,6 +1009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _obstaclePrefab: {fileID: 1580792115177486630, guid: 495ba5d780bfafb44b8019174e61be5f,
+    type: 3}
+  _tempPrefab: {fileID: 8968131289104861975, guid: a65b3de3fa37eb644b2ad595c56a5d79,
     type: 3}
 --- !u!1001 &1069535861
 PrefabInstance:

@@ -27,8 +27,6 @@ public class U3PlayerController : MonoBehaviour
         _playerRB = GetComponent<Rigidbody>();
         _playerAnim = GetComponent<Animator>();
         _playerAudio = GetComponent<AudioSource>();
-
-        Physics.gravity *= _gravityMod;
     }
 
     // Update is called once per frame
@@ -41,7 +39,6 @@ public class U3PlayerController : MonoBehaviour
             _playerAnim.SetTrigger("Jump_trig");
             _dirtParticle.Stop();
             _playerAudio.PlayOneShot(_jumpSFX, 1.0f);
-            __tempBG.JumpStart();
         }
     }
 
@@ -51,7 +48,6 @@ public class U3PlayerController : MonoBehaviour
         {
             _isOnGround = true;
             _dirtParticle.Play();
-            __tempBG.JumpEnd();
         }
             
         else if (collision.gameObject.CompareTag("Obstacle"))
@@ -63,7 +59,6 @@ public class U3PlayerController : MonoBehaviour
             _explosionParticle.Play();
             _dirtParticle.Stop();
             _playerAudio.PlayOneShot(_crashSFX, 1.0f);
-            Physics.gravity /= _gravityMod;
         }
     }
 }
