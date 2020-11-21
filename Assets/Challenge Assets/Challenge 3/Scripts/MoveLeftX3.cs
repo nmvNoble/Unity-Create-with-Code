@@ -8,9 +8,12 @@ public class MoveLeftX3 : MonoBehaviour
     private PlayerControllerX3 playerControllerScript;
     private float leftBound = -10;
 
+    private GameManagerX3 _gm;
+
     // Start is called before the first frame update
     void Start()
     {
+        _gm = GameObject.Find("Game Manager").GetComponent<GameManagerX3>();
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerControllerX3>();
     }
 
@@ -18,7 +21,7 @@ public class MoveLeftX3 : MonoBehaviour
     void Update()
     {
         // If game is not over, move to the left
-        if (!playerControllerScript.gameOver)
+        if (!_gm.isGameOver)
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
         }

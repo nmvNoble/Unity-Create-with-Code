@@ -4,28 +4,26 @@ using UnityEngine;
 
 public class PlayerControllerX3 : MonoBehaviour
 {
-    public bool gameOver = false;
 
     public float floatForce = 1;
-    private float gravityModifier = 1.5f, _lowerBound = 1.5f;
+    private float _lowerBound = 1.5f;
     private bool _isLowEnough = true;
     private Rigidbody playerRb;
 
     public ParticleSystem explosionParticle;
     public ParticleSystem fireworksParticle;
-
-    private AudioSource playerAudio;
     public AudioClip moneySound;
     public AudioClip explodeSound;
     public AudioClip boingSound;
-
+    private AudioSource playerAudio;
+    private GameManagerX3 _gm;
 
     // Start is called before the first frame update
     void Start()
     {
-        Physics.gravity *= gravityModifier;
-        playerAudio = GetComponent<AudioSource>();
+        _gm = GameObject.Find("Game Manager").GetComponent<GameManagerX3>();
 
+        playerAudio = GetComponent<AudioSource>();
         playerRb = GetComponent<Rigidbody>();
 
         // Apply a small upward force at the start of the game
@@ -41,12 +39,12 @@ public class PlayerControllerX3 : MonoBehaviour
         else
             _isLowEnough = true;
         // While space is pressed and player is low enough, float up
-        if (Input.GetKey(KeyCode.Space) && !gameOver && _isLowEnough)
+        if (Input.GetKey(KeyCode.Space) && !_gm.isGameOver && _isLowEnough)
         {
             playerRb.AddForce(Vector3.up * floatForce, ForceMode.Impulse);
         }
 
-        if (!gameOver && transform.position.y <= _lowerBound)
+        if (!_gm.isGameOver && transform.position.y <= _lowerBound)
         {
             playerRb.AddForce(Vector3.up * 3, ForceMode.Impulse);
             playerAudio.PlayOneShot(boingSound, 1.0f);
@@ -60,7 +58,7 @@ public class PlayerControllerX3 : MonoBehaviour
         {
             explosionParticle.Play();
             playerAudio.PlayOneShot(explodeSound, 1.0f);
-            gameOver = true;
+            _gm.isGameOver = true;
             Debug.Log("Game Over!");
             Destroy(other.gameObject);
         } 

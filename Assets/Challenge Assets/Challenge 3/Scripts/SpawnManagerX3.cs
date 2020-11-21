@@ -9,10 +9,12 @@ public class SpawnManagerX3 : MonoBehaviour
     private float spawnInterval = 1.5f;
 
     private PlayerControllerX3 playerControllerScript;
+    private GameManagerX3 _gm;
 
     // Start is called before the first frame update
     void Start()
     {
+        _gm = GameObject.Find("Game Manager").GetComponent<GameManagerX3>();
         InvokeRepeating("SpawnObjects", spawnDelay, spawnInterval);
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerControllerX3>();
     }
@@ -25,7 +27,7 @@ public class SpawnManagerX3 : MonoBehaviour
         int index = Random.Range(0, objectPrefabs.Length);
 
         // If game is still active, spawn new object
-        if (!playerControllerScript.gameOver)
+        if (!_gm.isGameOver)
         {
             Instantiate(objectPrefabs[index], spawnLocation, objectPrefabs[index].transform.rotation);
         }
