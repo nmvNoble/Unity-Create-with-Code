@@ -17,7 +17,6 @@ public class GameManagerX3 : MonoBehaviour
     void Start()
     {
         //Physics.gravity *= gravityModifier;
-        Time.timeScale = 1;
         score = 0;
         wave = 1;
         //_isNewWave = true;
@@ -45,7 +44,6 @@ public class GameManagerX3 : MonoBehaviour
 
     void GameOver()
     {
-        Time.timeScale = 0;
         _gameOverText.SetActive(true);
         _resetButton.SetActive(true);
     }

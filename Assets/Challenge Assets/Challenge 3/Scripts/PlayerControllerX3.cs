@@ -27,8 +27,10 @@ public class PlayerControllerX3 : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
 
         // Apply a small upward force at the start of the game
-        playerRb.AddForce(Vector3.up * 2, ForceMode.Impulse);
+        //playerRb.AddForce(Vector3.up * 2, ForceMode.Impulse);
 
+        explosionParticle.Stop();
+        fireworksParticle.Stop();
     }
 
     // Update is called once per frame
@@ -59,7 +61,6 @@ public class PlayerControllerX3 : MonoBehaviour
             explosionParticle.Play();
             playerAudio.PlayOneShot(explodeSound, 1.0f);
             _gm.isGameOver = true;
-            Debug.Log("Game Over!");
             Destroy(other.gameObject);
         } 
 
