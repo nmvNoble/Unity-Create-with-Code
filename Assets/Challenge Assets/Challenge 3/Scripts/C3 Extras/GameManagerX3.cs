@@ -10,7 +10,7 @@ public class GameManagerX3 : MonoBehaviour
     public int score, wave;
     [SerializeField] private Text _scoreText, _waveText;
     [SerializeField] private GameObject _gameOverText, _resetButton;
-    //private bool _isNewWave;
+    private bool _isNewWave;
     //private float gravityModifier = 1.5f;
 
     // Start is called before the first frame update
@@ -19,25 +19,25 @@ public class GameManagerX3 : MonoBehaviour
         //Physics.gravity *= gravityModifier;
         score = 0;
         wave = 1;
-        //_isNewWave = true;
+        _isNewWave = false;
         isGameOver = false;
     }
 
     private void Update()
     {
-        /*if (_isNewWave == false && score % 20 == 0)
+        if (_isNewWave == false && score % 5 == 0)
         {
             _isNewWave = true;
             wave++;
-            _waveText.text = "Wave: " + wave;
-        }*/
+            //_waveText.text = "Wave: " + wave;
+        }
         if (isGameOver)
             GameOver();
     }
 
     public void UpdateScore(int val)
     {
-        //_isNewWave = false;
+        _isNewWave = false;
         score += val;
         _scoreText.text = "Score: " + score;
     }
