@@ -94,15 +94,16 @@
     <Compile Include="Assets\Challenge Assets\Challenge 5\Scripts\TargetX5.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\SpawnManagerX4.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\EnemyX4.cs" />
+    <Compile Include="Assets\Scripts\Unit 3\U3 Extras\U3GameManager.cs" />
     <Compile Include="Assets\Scripts\Unit 2\U2PlayerController.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 3\Scripts\RepeatBackgroundX3.cs" />
     <Compile Include="Assets\Scripts\Unit 1\U1PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Templates\TempGameManager.cs" />
+    <Compile Include="Assets\Challenge Assets\Challenge 3\Scripts\C3 Extras\GameManagerX3.cs" />
     <Compile Include="Assets\Scripts\Unit 5\Target.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\PlayerControllerX4.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 3\Scripts\MoveLeftX3.cs" />
-    <Compile Include="Assets\Scripts\Unit 3\U3 Extras\U3GameManager.cs" />
-    <Compile Include="Assets\Challenge Assets\Challenge 3\Scripts\C3 Extras\GameManagerX3.cs" />
-    <Compile Include="Assets\Scripts\Templates\TempGameManager.cs" />
+    <Compile Include="Assets\Scripts\Unit 4\U4 Extras\U4GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
