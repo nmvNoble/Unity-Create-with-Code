@@ -40,8 +40,8 @@ public class U4GameManager : MonoBehaviour
     public void NewWave()
     {
         isNewWave = true;
+        _waveText.text = "Wave: " + wave;
         wave++;
-        //_waveText.text = "Wave: " + wave;
     }
 
     void GameOver()
