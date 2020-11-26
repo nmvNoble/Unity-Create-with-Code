@@ -15,13 +15,14 @@ public class U4PlayerController : MonoBehaviour
 
     private Rigidbody _playerRB;
     private GameObject _focalPoint;
-
+    private U4GameManager _gm;
 
     // Start is called before the first frame update
     void Start()
     {
         _playerRB = GetComponent<Rigidbody>();
         _focalPoint = GameObject.Find("Focal Point");
+        _gm = GameObject.Find("Game Manager").GetComponent<U4GameManager>();
     }
 
     // Update is called once per frame
@@ -29,11 +30,12 @@ public class U4PlayerController : MonoBehaviour
     {
         float forwardInput = Input.GetAxis("Vertical");
         _playerRB.AddForce(_focalPoint.transform.forward * speed * forwardInput);
-        if (transform.position.y <= -1)
+        if (transform.position.y <= -5)
         {
-            transform.position = Vector3.zero;
+            _gm.isGameOver = true;
+            /*transform.position = Vector3.zero;
             deaths++;
-            Debug.Log("Deaths: " + deaths);
+            Debug.Log("Deaths: " + deaths);*/
         }
         _powerUpIndicator.transform.position = transform.position
             + new Vector3(0, 1.5f, 0);
