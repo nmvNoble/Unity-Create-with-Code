@@ -16,7 +16,7 @@ public class U4SpawnManager : MonoBehaviour
         _gm = GameObject.Find("Game Manager").GetComponent<U4GameManager>();
 
         SpawnEnemyWave(_gm.wave);
-        Instantiate(powerupPrefab, RandPos(), powerupPrefab.transform.rotation);
+        //Instantiate(powerupPrefab, RandPos(), powerupPrefab.transform.rotation);
     }
 
     // Update is called once per frame
