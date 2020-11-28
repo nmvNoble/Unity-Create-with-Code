@@ -9,6 +9,8 @@ public class U4Enemy : MonoBehaviour
     private Rigidbody enemyRB;
     private GameObject player;
     private U4GameManager _gm;
+    private bool _isScoreCounted = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +24,14 @@ public class U4Enemy : MonoBehaviour
     {
         Vector3 lookAt = (player.transform.position - transform.position).normalized;
         enemyRB.AddForce( lookAt * speed);
+        if (transform.position.y <= -1 && _isScoreCounted == false)
+        {
+            _isScoreCounted = true;
+            _gm.UpdateScore(1);
+        }
         if (transform.position.y <= -10)
         {
             Destroy(this.gameObject);
-            _gm.UpdateScore(1);
         }
     }
 }
