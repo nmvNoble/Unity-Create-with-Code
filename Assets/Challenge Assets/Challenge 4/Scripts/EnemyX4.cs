@@ -7,10 +7,12 @@ public class EnemyX4 : MonoBehaviour
     public float speed;
     private Rigidbody enemyRb;
     private GameObject playerGoal;
+    private GameManagerX4 _gm;
 
     // Start is called before the first frame update
     void Start()
     {
+        _gm = GameObject.Find("Game Manager").GetComponent<GameManagerX4>();
         enemyRb = GetComponent<Rigidbody>();
         playerGoal = GameObject.Find("Player Goal");
     }
@@ -30,10 +32,12 @@ public class EnemyX4 : MonoBehaviour
         if (other.gameObject.name == "Enemy Goal")
         {
             Destroy(gameObject);
+            //_gm.UpdateScore(1);
         } 
         else if (other.gameObject.name == "Player Goal")
         {
-            Destroy(gameObject);
+            _gm.isGameOver = true;
+            //Destroy(gameObject);
         }
 
     }
