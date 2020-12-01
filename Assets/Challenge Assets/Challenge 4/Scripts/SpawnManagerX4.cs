@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnManagerX4 : MonoBehaviour
 {
@@ -14,13 +15,21 @@ public class SpawnManagerX4 : MonoBehaviour
     public int enemyCount;
     public int waveCount = 1;
 
-
     public GameObject player;
+    [SerializeField] private Text _timeText;
+    public float timeRemaining = 30f;
+    private float _timePrevious;
+    private GameManagerX4 _gm;
 
     private void Start()
     {
+        _timeText.text = "Time: " + timeRemaining;
+        StartCoroutine(StartCountdown());
         SpawnEnemyWave(waveCount);
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
+        _timePrevious = timeRemaining;
+        _gm = GameObject.Find("Game Manager").GetComponent<GameManagerX4>();
     }
 
     // Update is called once per frame
@@ -28,11 +37,25 @@ public class SpawnManagerX4 : MonoBehaviour
     {
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
-        if (enemyCount == 0)
+        if (enemyCount == 0 || timeRemaining == 0)
         {
+            _gm.level++;
+            timeRemaining = _timePrevious;
+            _timeText.text = "Time: " + timeRemaining;
             SpawnEnemyWave(waveCount);
         }
 
+    }
+
+    public IEnumerator StartCountdown()
+    {
+        _gm = GameObject.Find("Game Manager").GetComponent<GameManagerX4>();
+        while (!_gm.isGameOver)// && timeRemaining > 0)
+        {
+            yield return new WaitForSeconds(1.0f);
+            timeRemaining--;
+            _timeText.text = "Time: " + timeRemaining;
+        }
     }
 
     // Generate random spawn position for powerups and enemy balls
@@ -62,7 +85,6 @@ public class SpawnManagerX4 : MonoBehaviour
 
         waveCount++;
         ResetPlayerPosition(); // put player back at start
-
     }
 
     // Move player back to position in front of own goal

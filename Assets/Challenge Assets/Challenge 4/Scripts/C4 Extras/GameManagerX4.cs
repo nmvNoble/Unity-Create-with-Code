@@ -8,7 +8,7 @@ public class GameManagerX4 : MonoBehaviour
 {
     public bool isGameOver;
     public int score, level;
-    [SerializeField] private Text _scoreText, _levelText, _timeText;
+    [SerializeField] private Text _scoreText, _levelText;
     [SerializeField] private GameObject _gameOverText, _resetButton;
     private bool _isNewLevel;
 
