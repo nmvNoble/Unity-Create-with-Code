@@ -39,7 +39,7 @@ public class SpawnManagerX4 : MonoBehaviour
 
         if (enemyCount == 0 || timeRemaining == 0)
         {
-            _gm.level++;
+            _gm.NewLevel();
             timeRemaining = _timePrevious;
             _timeText.text = "Time: " + timeRemaining;
             SpawnEnemyWave(waveCount);

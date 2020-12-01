@@ -41,6 +41,14 @@ public class GameManagerX4 : MonoBehaviour
         _scoreText.text = "Score: " + score;
     }
 
+    public void NewLevel()
+    {
+        score += level;
+        _scoreText.text = "Score: " + score;
+        level++;
+        _levelText.text = "Level: " + level;
+    }
+
     void GameOver()
     {
         Time.timeScale = 0;

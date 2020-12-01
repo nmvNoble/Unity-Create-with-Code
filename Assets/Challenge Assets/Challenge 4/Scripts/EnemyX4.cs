@@ -40,12 +40,12 @@ public class EnemyX4 : MonoBehaviour
         if (other.gameObject.name == "Enemy Goal")
         {
             Destroy(gameObject);
-            //_gm.UpdateScore(1);
+            _gm.UpdateScore(1);
         } 
         else if (other.gameObject.name == "Player Goal")
         {
-            _gm.isGameOver = true;
-            //Destroy(gameObject);
+            //_gm.isGameOver = true;
+            Destroy(gameObject);
         }
 
     }
