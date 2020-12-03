@@ -44,8 +44,8 @@ public class EnemyX4 : MonoBehaviour
         } 
         else if (other.gameObject.name == "Player Goal")
         {
-            //_gm.isGameOver = true;
-            Destroy(gameObject);
+            _gm.isGameOver = true;
+            //Destroy(gameObject);
         }
 
     }

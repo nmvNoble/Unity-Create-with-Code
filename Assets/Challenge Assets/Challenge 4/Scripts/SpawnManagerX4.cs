@@ -23,13 +23,14 @@ public class SpawnManagerX4 : MonoBehaviour
 
     private void Start()
     {
-        _timeText.text = "Time: " + timeRemaining;
-        StartCoroutine(StartCountdown());
-        SpawnEnemyWave(waveCount);
+        _gm = GameObject.Find("Game Manager").GetComponent<GameManagerX4>();
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
         _timePrevious = timeRemaining;
-        _gm = GameObject.Find("Game Manager").GetComponent<GameManagerX4>();
+        _timeText.text = "Time: " + timeRemaining;
+
+        StartCoroutine(StartCountdown());
+        SpawnEnemyWave(waveCount);
     }
 
     // Update is called once per frame
@@ -40,9 +41,18 @@ public class SpawnManagerX4 : MonoBehaviour
         if (enemyCount == 0 || timeRemaining == 0)
         {
             _gm.NewLevel();
+            if((_gm.level+1) % 3 != 0)
+            {
+                _timePrevious += 5f;
+                SpawnEnemyWave(waveCount);
+            } else
+            {
+                waveCount++;
+                SpawnEnemyWave(waveCount);
+            }
+
             timeRemaining = _timePrevious;
             _timeText.text = "Time: " + timeRemaining;
-            SpawnEnemyWave(waveCount);
         }
 
     }
@@ -69,6 +79,7 @@ public class SpawnManagerX4 : MonoBehaviour
 
     void SpawnEnemyWave(int enemiesToSpawn)
     {
+        Debug.Log("Level: " + _gm.level + ", Timer: " + _timePrevious + ", Enemies: " + enemiesToSpawn);
         Vector3 powerupSpawnOffset = new Vector3(0, 0, -15); // make powerups spawn at player end
 
         // If no powerups remain, spawn a powerup
@@ -83,7 +94,6 @@ public class SpawnManagerX4 : MonoBehaviour
             Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
         }
 
-        waveCount++;
         ResetPlayerPosition(); // put player back at start
     }
 
