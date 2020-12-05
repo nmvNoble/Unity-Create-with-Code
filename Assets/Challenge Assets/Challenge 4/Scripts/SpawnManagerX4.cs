@@ -79,13 +79,12 @@ public class SpawnManagerX4 : MonoBehaviour
 
     void SpawnEnemyWave(int enemiesToSpawn)
     {
-        Debug.Log("Level: " + _gm.level + ", Timer: " + _timePrevious + ", Enemies: " + enemiesToSpawn);
-        Vector3 powerupSpawnOffset = new Vector3(0, 0, -15); // make powerups spawn at player end
+        Vector3 powerupSpawnOffset = new Vector3(0, 0, -20); // make powerups spawn at player end
 
-        // If no powerups remain, spawn a powerup
-        if (GameObject.FindGameObjectsWithTag("Powerup").Length == 0) // check that there are zero powerups
+        for (int p = 0; p < enemiesToSpawn; p++)
         {
-            Instantiate(powerupPrefab, GenerateSpawnPosition() + powerupSpawnOffset, powerupPrefab.transform.rotation);
+            if (GameObject.FindGameObjectsWithTag("Powerup").Length < _gm.level)
+                Instantiate(powerupPrefab, GenerateSpawnPosition() + powerupSpawnOffset, powerupPrefab.transform.rotation);
         }
 
         // Spawn number of enemy balls based on wave number

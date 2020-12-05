@@ -308,7 +308,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221162286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7215009, y: -2.9286633, z: -0.48263764}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1557,8 +1557,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Don''t let the footballs reach your Goal.
 
-    Goal some of them for extra
-    points.'
+    Gain extra points when
+    you goal the enemies.'
 --- !u!222 &1167596553
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1836,7 +1836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGameOver: 0
   score: 0
-  level: 0
+  level: 1
   _scoreText: {fileID: 534079667}
   _levelText: {fileID: 1065696459}
   _gameOverText: {fileID: 2073785369}
