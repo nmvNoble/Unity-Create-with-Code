@@ -445,7 +445,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 252242946}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 252242948}
+        m_TargetAssemblyTypeName: ButtonEvents, Assembly-CSharp
+        m_MethodName: LoadCWCScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &252242946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,6 +509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _introText: {fileID: 644325519}
+  _sceneToLoad: 6
 --- !u!1 &331120274
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +592,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 331120277}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 331120279}
+        m_TargetAssemblyTypeName: ButtonEvents, Assembly-CSharp
+        m_MethodName: LoadCWCScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &331120277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,6 +656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _introText: {fileID: 138688358}
+  _sceneToLoad: 10
 --- !u!1 &342275775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,7 +1145,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 616890258}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 616890260}
+        m_TargetAssemblyTypeName: ButtonEvents, Assembly-CSharp
+        m_MethodName: LoadCWCScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &616890258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1171,6 +1209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _introText: {fileID: 1136756302}
+  _sceneToLoad: 9
 --- !u!1 &634668537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1378,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 642835646}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 642835648}
+        m_TargetAssemblyTypeName: ButtonEvents, Assembly-CSharp
+        m_MethodName: LoadCWCScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &642835646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1391,6 +1442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _introText: {fileID: 634668539}
+  _sceneToLoad: 2
 --- !u!1 &644325517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,7 +1849,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 747132468}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 747132470}
+        m_TargetAssemblyTypeName: ButtonEvents, Assembly-CSharp
+        m_MethodName: LoadCWCScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &747132468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1849,6 +1913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _introText: {fileID: 1358817091}
+  _sceneToLoad: 8
 --- !u!1 &758965730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,7 +1996,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 758965733}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 758965735}
+        m_TargetAssemblyTypeName: ButtonEvents, Assembly-CSharp
+        m_MethodName: LoadCWCScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &758965733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1983,6 +2060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _introText: {fileID: 728273770}
+  _sceneToLoad: 3
 --- !u!1 &768793215
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,7 +2143,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 768793218}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 768793220}
+        m_TargetAssemblyTypeName: ButtonEvents, Assembly-CSharp
+        m_MethodName: LoadCWCScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &768793218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2117,6 +2207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _introText: {fileID: 1305676836}
+  _sceneToLoad: 4
 --- !u!1 &794416252
 GameObject:
   m_ObjectHideFlags: 0
@@ -2541,7 +2632,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1001753512}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1001753514}
+        m_TargetAssemblyTypeName: ButtonEvents, Assembly-CSharp
+        m_MethodName: LoadCWCScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1001753512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2593,6 +2696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _introText: {fileID: 474115546}
+  _sceneToLoad: 5
 --- !u!1 &1087153852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3532,7 +3636,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1675254551}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1675254553}
+        m_TargetAssemblyTypeName: ButtonEvents, Assembly-CSharp
+        m_MethodName: LoadCWCScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1675254551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3584,6 +3700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _introText: {fileID: 342275777}
+  _sceneToLoad: 1
 --- !u!1 &1725595971
 GameObject:
   m_ObjectHideFlags: 0
@@ -3745,7 +3862,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1773025877}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1773025879}
+        m_TargetAssemblyTypeName: ButtonEvents, Assembly-CSharp
+        m_MethodName: LoadCWCScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1773025877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3797,3 +3926,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _introText: {fileID: 940908335}
+  _sceneToLoad: 7
