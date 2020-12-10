@@ -106,6 +106,7 @@
     <Compile Include="Assets\Challenge Assets\Challenge 4\Scripts\PlayerControllerX4.cs" />
     <Compile Include="Assets\Challenge Assets\Challenge 3\Scripts\MoveLeftX3.cs" />
     <Compile Include="Assets\Scripts\Main Menu\ButtonEvents.cs" />
+    <Compile Include="Assets\Scripts\Templates\Pause.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

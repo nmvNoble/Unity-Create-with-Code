@@ -301,8 +301,8 @@ RectTransform:
   - {fileID: 817244673}
   - {fileID: 233534188}
   - {fileID: 192492502}
-  - {fileID: 1107753473}
   - {fileID: 1757998764}
+  - {fileID: 1107753473}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -659,9 +659,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: U1PlayerController, Assembly-CSharp
-        m_MethodName: ResetPos
+      - m_Target: {fileID: 1107753474}
+        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
+        m_MethodName: PauseOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2358,6 +2358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1107753473}
+  - component: {fileID: 1107753474}
   m_Layer: 5
   m_Name: Pause Screen
   m_TagString: Untagged
@@ -2379,13 +2380,29 @@ RectTransform:
   - {fileID: 1774754998}
   - {fileID: 1273265829}
   m_Father: {fileID: 91567426}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1107753474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107753472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c46f4930a2f8224dbe641c243785e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
+  _pauseBtn: {fileID: 192492501}
+  _resumeBtn: {fileID: 1757998763}
+  _pauseScreen: {fileID: 1107753472}
 --- !u!1 &1119695340
 GameObject:
   m_ObjectHideFlags: 0
@@ -2547,9 +2564,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: U1PlayerController, Assembly-CSharp
-        m_MethodName: ResetPos
+      - m_Target: {fileID: 1107753474}
+        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
+        m_MethodName: LoadCWCMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3050,7 +3067,7 @@ RectTransform:
   m_Children:
   - {fileID: 301297015}
   m_Father: {fileID: 91567426}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -3100,9 +3117,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: U1PlayerController, Assembly-CSharp
-        m_MethodName: ResetPos
+      - m_Target: {fileID: 1107753474}
+        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
+        m_MethodName: ResumeOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
