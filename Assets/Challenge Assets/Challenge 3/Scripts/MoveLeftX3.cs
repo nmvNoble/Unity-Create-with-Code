@@ -13,8 +13,8 @@ public class MoveLeftX3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed += _gm.wave;
         _gm = GameObject.Find("Game Manager").GetComponent<GameManagerX3>();
+        speed += _gm.wave;
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerControllerX3>();
     }
 

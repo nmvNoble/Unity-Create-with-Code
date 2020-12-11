@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControllerX3 : MonoBehaviour
 {
 
-    public float floatForce = 1;
+    public float floatForce = 0.3f;//1;
     private float _lowerBound = 1.5f;
     private bool _isLowEnough = true;
     private Rigidbody playerRb;
@@ -37,7 +37,10 @@ public class PlayerControllerX3 : MonoBehaviour
     void Update()
     {
         if (transform.position.y > 14)
+        {
+            playerRb.velocity = new Vector3(0, -0.5f, 0);
             _isLowEnough = false;
+        }
         else
             _isLowEnough = true;
         // While space is pressed and player is low enough, float up
@@ -48,8 +51,8 @@ public class PlayerControllerX3 : MonoBehaviour
 
         if (!_gm.isGameOver && transform.position.y <= _lowerBound)
         {
-            playerRb.AddForce(Vector3.up * 3, ForceMode.Impulse);
-            playerAudio.PlayOneShot(boingSound, 1.0f);
+            playerRb.AddForce(Vector3.up * 2, ForceMode.Impulse);
+            playerAudio.PlayOneShot(boingSound, .5f);
         }
     }
 
