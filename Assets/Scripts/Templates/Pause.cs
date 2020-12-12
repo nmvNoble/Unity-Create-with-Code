@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
-    public bool isPaused;
+    public bool isPaused = false;
     [SerializeField] private GameObject _pauseBtn, _resumeBtn, _pauseScreen;
 
     // Start is called before the first frame update
     void Start()
     {
-        isPaused = false;
+        //isPaused = false;
     }
 
     // Update is called once per frame
@@ -27,6 +27,7 @@ public class Pause : MonoBehaviour
         _pauseBtn.SetActive(false);
         _resumeBtn.SetActive(true);
         _pauseScreen.SetActive(true);
+        Debug.Log("Pause, isPaused: " + isPaused);
     }
 
     public void ResumeOnClick()
@@ -36,6 +37,7 @@ public class Pause : MonoBehaviour
         _pauseBtn.SetActive(true);
         _resumeBtn.SetActive(false);
         _pauseScreen.SetActive(false);
+        Debug.Log("Resume, isPaused: " + isPaused);
     }
 
     public void LoadCWCMenu()

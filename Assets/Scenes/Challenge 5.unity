@@ -1941,6 +1941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficulty: 2
+  _pause: {fileID: 1931219365}
 --- !u!114 &1390857141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2777,6 +2778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficulty: 3
+  _pause: {fileID: 1931219365}
 --- !u!114 &1910376317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3049,6 +3051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficulty: 1
+  _pause: {fileID: 1931219365}
 --- !u!114 &2064518096
 MonoBehaviour:
   m_ObjectHideFlags: 0
