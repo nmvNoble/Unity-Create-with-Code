@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonEvents : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] private Text _introText;
+    [SerializeField] private GameObject _introText, _mainMenuText, _exitButton;
     [SerializeField] private int _sceneToLoad;
     //private bool mouse_over = false;
     
@@ -27,6 +27,8 @@ public class ButtonEvents : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void OnPointerEnter(PointerEventData eventData)
     {
         _introText.gameObject.SetActive(true);
+        _mainMenuText.gameObject.SetActive(false);
+        _exitButton.gameObject.SetActive(false);
         //mouse_over = true;
         //Debug.Log("Mouse enter");
     }
@@ -34,6 +36,8 @@ public class ButtonEvents : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public void OnPointerExit(PointerEventData eventData)
     {
         _introText.gameObject.SetActive(false);
+        _mainMenuText.gameObject.SetActive(true);
+        _exitButton.gameObject.SetActive(true);
         //mouse_over = false;
         //Debug.Log("Mouse exit");
     }
